@@ -1,13 +1,11 @@
 import AuthInput, { AuthContainer } from "../components/common/Auth";
 import {
   AuthButton,
-  LinkTextContainer,
   AuthLinkText,
   AuthTitle,
 } from "../components/common/Auth";
-// import { Logo } from "../assets/images";
 import { ReactComponent as Logo } from "../assets/icons/LOGO.svg";
-// import styles from "./LoginPage.module.scss";
+import { Link } from "react-router-dom";
 
 const LoginPage = () => {
   return (
@@ -34,9 +32,15 @@ const LoginPage = () => {
       />
 
       <AuthInput type="password" label="密碼" placeholder="請設定密碼" />
-      <AuthInput type="password" label="密碼確認" placeholder="請再次輸入密碼" />
+      <AuthInput
+        type="password"
+        label="密碼確認"
+        placeholder="請再次輸入密碼"
+      />
       <AuthButton>註冊</AuthButton>
+      <Link to="/users/login">
         <AuthLinkText>取消</AuthLinkText>
+      </Link>
     </AuthContainer>
   );
 };

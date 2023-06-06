@@ -1,7 +1,5 @@
-import styles from './Auth.module.scss'
-
 const AuthContainer = ({ children }) => {
-  return <div className={styles.authContainer}>{children}</div>;
+  return <div className="authContainer">{children}</div>;
 };
 
 const AuthInput = ({
@@ -15,19 +13,19 @@ const AuthInput = ({
 }) => {
   return (
     <>
-      <div className={styles.inputContainer}>
-        <label className={styles.label}>{label}</label>
+      <div className="authInputContainer">
+        <label className="authInputLabel">{label}</label>
         <input
-          className={styles.input}
+          className="authInput"
           type={type || "text"}
           value={value}
           placeholder={placeholder}
           onChange={(event) => onChange?.(event.target.value)}
         />
       </div>
-      <div className={styles.messageContainer}>
-        <div className={styles.alertText}>{alertText}</div>
-        <div className={styles.wordCount}>{wordCount}</div>
+      <div className="authInputMessageContainer">
+        <div className="authInputAlertText">{alertText}</div>
+        <div className="authInputWordCount">{wordCount}</div>
       </div>
     </>
   );
@@ -35,34 +33,22 @@ const AuthInput = ({
 
 const AuthButton = ({children}) => {
   return(
-    <button className={styles.button}>{children}</button>
+    <button className="authButton">{children}</button>
   )
 }
 
 const LinkTextContainer = ({ children }) => {
-  return <div className={styles.linkTextContainer}>{children}</div>;
+  return <div className="authLinkTextContainer">{children}</div>;
 };
 
 
 const AuthLinkText = ({ children }) => {
-  return <div className={styles.linkText}>{children}</div>;
+  return <div className="authLinkText">{children}</div>;
 };
 
 const AuthTitle = ({ children }) => {
-  return <div className={styles.authTitle}>{children}</div>;
+  return <div className="authTitle">{children}</div>;
 };
-
-// const MessageContainer = ({ children }) => {
-//   return <div className={styles.messageContainer}>{children}</div>;
-// };
-
-// const AlertText = ({ children }) => {
-//   return <div className={styles.alertText}>{children}</div>;
-// };
-
-// const WordCount = ({ children }) => {
-//   return <div className={styles.wordCount}>{children}</div>;
-// };
 
 
 export default AuthInput;
@@ -71,7 +57,3 @@ export { AuthLinkText };
 export { LinkTextContainer };
 export { AuthTitle };
 export { AuthContainer }
-// export { AlertText }
-// export { WordCount };
-// export { MessageContainer }
-

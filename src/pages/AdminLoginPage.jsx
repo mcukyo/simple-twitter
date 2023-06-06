@@ -1,18 +1,18 @@
-import AuthInput, { AuthContainer } from "../components/common/Auth"
+import AuthInput, { AuthContainer } from "../components/common/Auth";
 import {
   AuthButton,
   LinkTextContainer,
   AuthLinkText,
-  AuthTitle
+  AuthTitle,
 } from "../components/common/Auth";
 import { ReactComponent as Logo } from "../assets/icons/LOGO.svg";
 import { Link } from "react-router-dom";
 
-const LoginPage = () => {
+const AdminLoginPage = () => {
   return (
     <AuthContainer>
       <Logo />
-      <AuthTitle>登入 Alphitter</AuthTitle>
+      <AuthTitle>後台登入</AuthTitle>
       <AuthInput
         label="帳號"
         placeholder="請輸入帳號"
@@ -22,16 +22,12 @@ const LoginPage = () => {
       <AuthInput type="password" label="密碼" placeholder="請輸入密碼" />
       <AuthButton>登入</AuthButton>
       <LinkTextContainer>
-        <Link to="/users/signup">
-          <AuthLinkText>註冊</AuthLinkText>
-        </Link>
-        ·
-        <Link to="/admin/login">
-          <AuthLinkText>登入後台</AuthLinkText>
+        <Link to="/users/login">
+          <AuthLinkText>前台登入</AuthLinkText>
         </Link>
       </LinkTextContainer>
     </AuthContainer>
   );
-}
+};
 
-export default LoginPage;
+export default AdminLoginPage;
